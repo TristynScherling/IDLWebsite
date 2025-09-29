@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - ECS</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+        <a href="Projects.html" class="nav-button">Projects</a>
+    </nav>
+    <div>
+        <img src="Images/ECS/Header.png" alt="Header Image" class="header-image">
+    </div>
+    <h1 class="subject-title" style="text-align: center; margin-top: 20px; color: white;">
+        Exploring Computer Science (ECS)
+    </h1>
+    <div>
+        <img src="Images/ECS/f1quote.png" alt="If you no longer go for a gap which exists you are no longer a racing driver - Ayrton Senna"  width="250px" height="auto" style="margin: 25px; border-radius: 25px;">
+        <img src="Images/ECS/F1 Logo.png" alt="Fan Made F1 Logo"  width="300px" height="auto" style="margin: 25px; border-radius: 25px;">
+        <img src="Images/ECS/Monaco2025.png" alt="It's lights out and away we go - David Croft"  width="300px" height="auto" style="margin: 25px; border-radius: 25px;">
+    </div>
+    <div>
+        <img src="Images/ECS/lianaflores.png" alt="Liana Flores Fake Flyer" width="300px" height="auto" style="margin: 50px; border-radius: 25px;">
+    </div>
+    <div>
+        <img src="Images/ECS/Barts.png" alt="Sad Bart" width="300px" height="auto" style="margin: 50px; border-radius: 25px;">
+    </div>
+</body>
+
+
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 28, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>

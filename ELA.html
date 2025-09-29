@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - ECS</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+        <a href="Projects.html" class="nav-button">Projects</a>
+    </nav>
+    
+    <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #c3ffbf; color: #4c2414; border-radius: 10px;">
+        <h1>Oh Delicious Steak!</h1>
+        <p style="text-indent: 25px;">On a cold, brisk afternoon, the delicate aroma of a succulent steak fills the house – an unforgettable scent. Steak has been a common food around the world for centuries. Steak is also a comprehensive description of the food: there are multiple different ways to prepare/cook a steak. There are over 50 ways to make it, including but not limited to: grilling– for smoky char, pansearing– for a rich crust, broiling– for high-heat searing, reverse searing –for a balanced cook and crust, sous vide – for precise tender results, over-roasting, marinating – for flavor and tenderness, and even raw steak as tartare of course 😎✌️🥭 . Now obviously, all these methods weren’t used centuries ago when steak was developing into a more popular food. The historical evolution of steak, from its origins in Scandinavia and Italy, where it was known as “steikja” and “bistecca” respectively, both were prepared much more simply than in modern times. Now it is served at top restaurants and even in more affordable establishments worldwide.</p>
+
+        <p style="text-indent: 25px;">The meat was prepared in similar ways in Italy and Scandinavia. They were either grilled or fried, depending on personal preference, and were most likely served with beer or wine. The practice spread throughout Europe, with a stake referring to a hind cut of whatever meat was readily available. When it comes to the present times, it is common in other places in the world to ask for a beefsteak, a tuna steak, or other alternatives, but in the U.S., unless specified, you would most likely receive a beefsteak. Introduced in small numbers to North America by the Spanish, cattle had not been popular outside of Spanish-controlled territories. During the 1800s, population booms had people moving from places on the coast, which had started to become cramped, to further inland. With nothing but space, the people who settled started farms. These farms would start to feed those in the cities who did not have space, time, or just didn’t want to grow their own crops. Around that time, industrial processing was picking up in the cities. As more time was being spent in factories,  it made more people have less time to cook, and the need for places that cooked meals was on the rise. </p>
+
+        <p style="text-indent: 25px;">I remember the 4th of July when I was a kid. It was different from all the other 4th of July parties, mainly because this time the neighborhood had a block party; a block party is where you get permission from the residents/police of a certain street and “block it off.” During it, I was running around playing with my friends when I saw my mom start cooking some pork and steak on the grill. I ran over instantly. Her cooking was, and still is, the best cooking I’ve ever had. She always made something so delicious out of seemingly nothing. It was like she was pulling ingredients from a magic pantry: never failing to create something unforgettable. Like my fifth birthday, when she made a pretty cool birthday cake – a Rice Krispies base, Lego sugar blocks on the edge, frosty over it, sour candy strips acting as a road, and a tiny mountain made of Rice Krispies. Little sugar rocks on the edge of the road, a few small monster trucks, and best of all, the massive monster truck on the mountain. But that's a story for another time. I remember asking, “What's that?” I was too short to see what my mom was carrying; all I had to know was that it was food, and she answered back, “It's food.” My mother tends to say that when I ask what type of food it is. As always, I just had to wait till it was ready, smelling how delicious the aroma of the cooking was, it was encapsulating. Once it was finally done cooking, I ate it almost instantly, going back for seconds. It was so delicious, juicy – I even forgot my manners on the spot. I had sauce all over myself, the juice from the steak running down my chin. It was all over me! It might have taken a while to clean up, but in the end, it was all worth it. That's when I knew, all I needed, all I desired in life was a day filled with playing with friends and having a steak dinner</p>
+
+        <p style="text-indent: 25px;">As I’ve grown up, I’ve found myself stepping into the role of teacher, especially with my younger cousins. I show them how to tell when the steak is ready, how to flip it gently, and how to let it rest before slicing. It feels like I’m passing on more than just cooking tips—I'm continuing a tradition that my family has built over time. Since my mother stopped making it as often, those moments carry even more weight. She used to be the first one at the grill and the last one to grab a plate. Now, when it’s cooked, there’s a quiet part of me that still hopes she’s nearby, maybe in the smoke or the warmth of the fire, smiling at the food she loves so much.</p>
+        
+        <p style="text-indent: 25px;">Food has always been more than just fuel for the body. It’s a way of connecting with people, with memories, and with culture. A dish like steak can carry history, emotion, and pride all at once. It’s a way to show love without needing to say anything. Sitting down to eat something that’s been passed through generations is like reading a story written in flavor. It reminds you of who you are, where you’ve been, and who you share that path with. And on a cold, brisk afternoon, when the delicate aroma of a succulent steak fills the house, it’s still–just like it was back then–completely unforgettable.</p>
+
+        <p>Thank you for reading my essay!</p>
+    </div>
+
+
+</body>
+
+
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 25, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>

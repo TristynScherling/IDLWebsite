@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - Art</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+        <a href="Projects.html" class="nav-button">Projects</a>
+    </nav>
+    <h1 class="subject-title" style="text-align: center; margin-top: 20px; color: white;">
+        Art
+    </h1>
+    <div>
+        <img src="Images/Art/Album.jpg" alt="Gobbledygook"  width="250px" height="auto" style="margin: 25px; border-radius: 25px;">    </div>
+    </div>
+    <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #c3ffbf; color: #4c2414; border-radius: 10px;">
+        <p> My album cover is autobiographical because it captures the chaos and confusion - the "gobbledygook" - that defines my personal experience from watching Troll Hunters. <br><br>
+            I'm proud of how well it represents that abstract feeling.<br><br>
+            The reference to LeBron's haircut adds a layer of humor and commentary on identity.<br><br>
+            Next time, I might push the details even further.<br>
+        </p>
+    </div>
+    </body>
+
+
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 29, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>

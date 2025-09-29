@@ -1,0 +1,125 @@
+/* Customs.css - external stylesheet */
+:root{
+    --accent: #00cc99;
+    /* Accent color for buttons and borders */
+    --hover: #8ab4f8;
+    /* Hover color for buttons */
+    --bg: #36F57F;
+    /* Background color */
+    --text: #ffffff;
+    /* Text color */
+    --font-serif: "Times New Roman", Times, serif;
+    /* Serif font for headings */
+}
+
+body.home-background{
+    background-color: var(--bg);
+    /* Set background color */
+    margin: 0;
+    /* Remove default margin */
+    font-family: var(--font-serif);
+    /* Set font family */
+    text-align: center;
+    /* Center text */
+}
+
+/* Top navigation */
+nav.navtopbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: fit-content;
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.navcenterblock {
+    width: 25%;
+    /* Width adjusts to content */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: row;
+    /* Arrange items in a row */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 10px;
+    /* Space between items */
+    padding: 10px 20px;
+    /* Padding inside the nav */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-top: 30px;
+    /* Space above the nav */
+    border: 1px solid #00cc99;
+    /* Border color */
+    background-color: #00cc99;
+    /* Background color */
+    margin-left: auto;
+    /* Center the nav horizontally */
+    margin-right: auto;
+   /* Center the nav horizontally */
+}
+
+    /* Make each button take half the row so max 2 per row */
+nav.navcenterblock .nav-button {
+    flex: 1 1 calc(50% - 100px);
+    /* Flex-grow, flex-shrink, flex-basis */
+}
+
+/* Nav link styled as button */
+.nav-button {
+    border: 1px solid var(--accent);
+    padding: 8px 15px;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    will-change: transform;
+}
+
+.nav-button:hover {
+    background-color: var(--hover);
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* Header image */
+.header-image {
+    max-width: 95%;
+    height: 250px;
+    margin-top: 20px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--accent);
+}

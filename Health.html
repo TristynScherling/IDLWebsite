@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - Art</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+        <a href="Projects.html" class="nav-button">Projects</a>
+    </nav>
+    <h1 class="subject-title" style="text-align: center; margin-top: 20px; color: white;">
+        Health School Proposal for Hydration
+    </h1>
+
+    <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #c3ffbf; color: #4c2414; border-radius: 10px;">
+        <p>
+            What Happens When You’re Dehydrated When we don’t drink enough water, it can really affect how we feel. Some common signs of dehydration are headaches, feeling tired, dry mouth, and trouble focusing in class. It can even make you feel dizzy or weak, especially if you're running around or playing sports. Basically, our bodies don’t work as well without enough water. <br><br>
+            How We Can Fix It One easy way to fix this is by making sure we drink water regularly during the day. Bringing a reusable water bottle to school and filling it up helps a lot. Schools can also remind students to take water breaks and make sure fountains are easy to use. It’s all about making water a normal part of our daily routine. <br><br>
+            Why Being Hydrated Is Great When we’re properly hydrated, we feel more awake, can think more clearly, and even have more energy. Drinking enough water helps with concentration, keeps our bodies cool, and supports our overall health. It can also help with things like clearer skin and better digestion. Staying hydrated just makes us feel better in general. <br><br>
+        </p>
+    </div>
+    <div>
+        <img src="Images/Health/Healthy.png" alt="Healthy Habits" style="display: block; margin: 0 auto; width: 835px; height: auto; border-radius: 10px;">
+    </div>
+    </body>
+
+
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 29, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>

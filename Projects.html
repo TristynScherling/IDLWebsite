@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - Home</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+    </nav>
+    <nav class="navcenterblock">
+        <a href="Art.html" class="nav-button">Art</a>
+        <a href="Math.html" class="nav-button">Math</a>
+        <a href="ECS.html" class="nav-button">ECS</a>
+        <a href="Spanish.html" class="nav-button">Spanish</a>
+        <a href="ELA.html" class="nav-button">ELA</a>
+        <a href="Health.html" class="nav-button">Health</a>
+    </nav>
+</body>
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 5, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>
