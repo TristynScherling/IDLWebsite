@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tristyn Scherling - Math</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Tristyn Scherling, ECS, Education, Computer Science, School">
+    <meta name="description" content="Tristyn Scherling's IDL Home Page">
+    <meta name="author" content="Tristyn Scherling">
+    <link rel="stylesheet" text="text/css" href="Customs.css">
+</head>
+
+<body class="home-background">
+    
+    <nav class="navtopbar">
+        <a href="Index.html" class="nav-button">Home</a>
+        <a href="Projects.html" class="nav-button">Projects</a>
+    </nav>
+    <h1 class="subject-title" style="text-align: center; margin-top: 20px; color: white;">
+        Math - Minecraft Rollercoaster
+    </h1>
+    <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #c3ffbf; color: #4c2414; border-radius: 10px;">
+        <p>
+            My roller coaster is a Minecraft recreation inspired by the American Eagle wooden coaster from Six Flags Great America. The theme centers around classic American thrill rides, with a patriotic red, white, and blue color scheme and a vintage amusement park feel. What makes it unique is that it's built entirely with a wooden structure, just like the original, capturing the towering drops, fast turns, and racing dual tracks.
+        </p>
+    </div>
+
+    <video src="Images/FinalVid.mp4" controls style="display: block; margin-left: auto; margin-right: auto; width: 85%; border-radius: 25px;">
+        Your browser does not support the video tag.
+    </video>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKESWxR67Qwigr7RY5ND0tvkpIaNDa7NMQUL6oyi9gW-TsgQ8MJltAl4a5z6t1I_7xVejuZIS044fI/pubhtml?widget=true&amp;headers=false" style=" width: 85%; height: 500px;"></iframe>    
+    </body>
+
+
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #00cc99; color: white; border-radius: 10px; width: fit-content; margin-left: auto; margin-right: auto; border: 1px solid #00cc99;">
+    <p>&copy; 2025 Tristyn Scherling</p>
+    <p>Last Updated: September 29, 2025</p>
+    <label for="localTime">Local Time: </label><time id="localTime" datetime=""></time>
+</footer>
+
+<script>
+    const el = document.getElementById("localTime");
+    const opts = { 
+        year: "numeric", 
+        month: "short", 
+        day: "numeric", 
+        hour: "numeric", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true 
+    };
+
+    function update() {
+        const now = new Date();
+        el.textContent = new Intl.DateTimeFormat(navigator.language, opts).format(now);
+        el.setAttribute("datetime", now.toISOString());
+    }
+
+    update();
+    setInterval(update, 1000);
+</script>
+
+</html>
